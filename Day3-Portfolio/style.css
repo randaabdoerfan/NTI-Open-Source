@@ -1,0 +1,386 @@
+        body {
+            background-color: rgb(30, 32, 44);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10%;
+            justify-content: space-between
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: burlywood;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .intro {
+            margin-top: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        div .profile {
+            border: 2px solid lightblue;
+            border-radius: 50%;
+            width: 60%;
+        }
+
+        .about {
+            width: 60%;
+        }
+
+        .about,
+        .skills-section,
+        .project-section,
+        .contact-section,
+        footer {
+            height: 160px;
+            text-align: center;
+            margin: 100px auto;
+
+        }
+
+        .skills {
+            width: 100%;
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill {
+            width: 16%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .projects {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 15px;
+        }
+
+        .projects .div1 {
+            background-image: url(./Assets/Projects/restaurant.jpg);
+
+        }
+
+        .projects .div2 {
+            background-image: url(./Assets/Projects/Products.png);
+        }
+
+        .projects .div3 {
+            background-image: url(./Assets/Projects/tickets.jpg);
+        }
+
+        .projects .div4 {
+            background-image: url(./Assets/Projects/digital-library.jpg);
+        }
+
+        .projects .div1,
+        .projects .div2,
+        .projects .div3,
+        .projects .div4 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-size: cover;
+            height: 150px;
+            z-index: -20;
+            border-radius: 10px;
+
+        }
+
+        .projects p {
+            margin-bottom: 0;
+            width: 100%;
+            background-color: rgba(29, 28, 28, 0.9);
+            padding: 10px 15px;
+            color: white;
+            display: inline-block;
+        }
+        .contact{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+       table{
+            width: 50%;
+            height: 100%;
+
+            
+        }
+        input,textarea{
+            width: 95%;
+            border-radius: 5px;
+            padding: 7px;
+        }
+        textarea{
+            height: 90px;
+        }
+        input[type="submit"]{
+            background-color: lightseagreen;
+            width: 100%;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(3, 33, 31);
+            cursor: pointer;
+            color: white;
+        }
+        footer{
+            width: 100%;
+            margin-top:200px;
+           text-align: center;
+           margin-bottom: 10px;
+        }
+          @media all and (min-width:601px)and (max-width:900px) {
+                .intro{
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+
+            }
+            nav {
+                flex-direction: column;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 50px;
+            }
+            .about,.skills,.projects{
+                flex-direction: column;
+
+            }
+           .about,
+        .contact-section,
+        .skills-section,
+        footer {
+            height: 400px;
+            text-align: center;
+
+
+        }
+        
+        .project-section{
+             height: 650px;
+        }
+         .skill {
+            width: 40%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255, 0.2);
+            
+            align-items: center;
+            justify-content: center;
+
+        }
+        .skills {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+        }
+         .projects {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 15px;
+        }
+               table{
+            width: 90%;
+            height: 100%;
+
+            
+        }
+        input,textarea{
+            width: 100%;
+            border-radius: 5px;
+            padding: 7px;
+        }
+        textarea{
+            height: 90px;
+        }
+
+          }
+        @media all and (min-width:401px)and (max-width:600px) {
+                .intro{
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+
+            }
+            nav {
+                flex-direction: column;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 50px;
+            }
+            .about,.skills,.projects{
+                flex-direction: column;
+
+            }
+           .about,
+        .contact-section,
+        .skills-section,
+        footer {
+            height: 400px;
+            text-align: center;
+
+
+        }
+        
+        .project-section{
+             height: 650px;
+        }
+                .skills {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+        }
+         .skill {
+            width: 60%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+         .projects {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 15px;
+        }
+        table{
+            width: 90%;
+            height: 100%;   
+        }
+        input,textarea{
+            width: 100%;
+            border-radius: 5px;
+            padding: 7px;
+        }
+        textarea{
+            height: 90px;
+        }
+
+          }
+
+
+        @media all and (min-width:300px)and (max-width:400px) {
+            .intro{
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+
+            }
+            nav {
+                flex-direction: column;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 50px;
+            }
+            .about,.skills,.projects{
+                flex-direction: column;
+
+            }
+           .about,
+        .contact-section,
+        .skills-section,
+        footer {
+            height: 400px;
+            text-align: center;
+
+
+        }
+        
+        .project-section{
+             height: 650px;
+        }
+        .skills {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+        }
+         .skill {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+         .projects {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto;
+            gap: 15px;
+        }
+               table{
+            width: 90%;
+            height: 100%;
+
+            
+        }
+        input,textarea{
+            width: 100%;
+            border-radius: 5px;
+            padding: 7px;
+        }
+        textarea{
+            height: 90px;
+        }
+
+    }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page</title>
+</head>
+<body>
+    <h1 align="center">
+        Personal Students
+    </h1>
+    <h4 align="center">
+        all information about Student
+    </h4>
+    <hr width="900">
+    <section>
+        <h2>Personal Information</h2>
+        <table border="2" height="200" width="900" align="center">
+            <tr>
+                <th>Name</th>
+                <td>Randa Abdelkader Mohammed Erfan</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>25</td>
+            </tr>
+            <tr>
+                <th>Faculty</th>
+                <td>Computer and Systems Engineering</td>
+            </tr>
+            <tr>
+                <th>University</th>
+                <td>Zagazig University</td>
+            </tr>
+        </table>
+        <hr width="900">
+
+        <h2>Subjects</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+        <hr width="900">
+
+        <h2>Marks</h2>
+        <table border="2" width="900">
+            <tr>
+                <th>Subject</th>
+                <th>Mark</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>85</td>
+            </tr>
+        </table>
+        <hr width="900">
+
+        <h2>Contact Student</h2>
+        <form method="get" action="details.html">
+            <label for="username">Name</label><br>
+            <input type="text" name="username" placeholder="Please Enter your name" required><br>
+            <br>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" placeholder="Please Enter your email" required><br>
+            <br>
+            <label for="department">Select Department</label><br>
+            <select name="department">
+                <option name="department" value="computer">Computer Enginering</option>
+                <option name="department" value="communication">Communication and Electronics Engineering</option>
+                <option name="department" value="Power">Power Elctrical Engineering</option>
+                <option name="department" value="mectronics">Mectronics Engineering</option>
+                <option name="department" value="Mechinecal">Mechinecal Enginering</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="year">Select Year</label><br>
+            <select name="year">
+                <option name="year" value="first">First Year</option>
+                <option name="year" value="second">Second Year</option>
+                <option name="year" value="third">Third Year</option>
+                <option name="year" value="forth">Forth Year</option>
+                <option name="year" value="fifth">Fifth Year</option>
+            </select>
+            <br>
+            <br>
+            <label for="gender">Gender</label><br>
+            <input name="gender" type="radio" value="Female"><label for="gender">Female</label>
+            <input name="gender" type="radio" value="Male"><label for="gender">Male</label>
+            <br>
+            <br>
+
+            <label for="skills">Skills</label><br>
+            <input name="skills" type="checkbox" value="HTML5"><label for="skills">HTML</label>
+            <input name="skills" type="checkbox" value="CSS3"><label for="skills">CSS</label>
+            <input name="skills" type="checkbox" value="JavaScript"><label for="skills">JavaScripr</label>
+            <input name="skills" type="checkbox" value="React"><label for="skills">React</label>
+            <br>
+            <br>
+
+            <label for="note">Write your message</label><br>
+            <textarea rows="5" cols="40" placeholder="Enter your message"></textarea><br>
+            <br>
+            <br>
+
+            <input type="submit" value="Send Message">
+            <input type="reset" value="Clear">
+        </form>
+
+        <hr width="700">
+
+        <footer color="red" align="center">
+            &copy;2026 Student Page. All rights reserved.
+        </footer>
+</body>
+
+</html>

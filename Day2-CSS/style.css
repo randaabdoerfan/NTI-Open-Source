@@ -1,0 +1,221 @@
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        header{  
+            width: 100%;
+            position: fixed;
+            height: 200px;
+            z-index: 1000;
+        }
+        ul{
+           background-color: lightgray; 
+           height: 120px;
+           list-style-type: none;
+           font-weight:bold ;
+           font-size: 15px;
+
+           
+        }
+        li{
+            width: 100px;
+            display: inline-block;
+            margin: 10px auto;
+            text-align: center;
+            align-items: center;
+            padding-top: 35px;
+            
+            
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        ul:first-child{
+            padding-left: 250px; 
+        }
+        .home{
+            padding-left: 200px;
+            
+        }
+        li img{
+            width: 100px;
+            
+        }
+
+        .first{
+            padding-top: 600px;
+            width: 100%;
+            background-image: url(./images/bg-home.jpg);
+            background-position: center;  
+            z-index: -20;
+            position: relative;   
+            background-repeat: repeat-x;
+            top: 130px;
+        }
+        .icon1{
+            width: 150px;
+            position: absolute;
+            bottom: 20px;
+            left: 880px;
+        }
+        .h2{
+            position: absolute;
+            bottom: 90px;
+            left:920px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .second{
+            position: relative;
+            top: 130px;
+            background-color: rgb(238, 229, 231);
+            text-align:left ;
+            padding: 130px;
+            
+        }
+        .yogurt{
+            position: relative;
+            float: right;
+            bottom: 130px;
+            right: 150px;
+        }
+        h3,a[href='Home.html']{
+            color: rgb(226, 65, 92)
+        }
+        h3{
+            font-weight: bolder;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 800px;
+            margin: 10px auto;
+        }
+        h1 {
+            width: 100%;
+            background-color: rgb(179, 187, 35);
+            height: 150px;
+            position: relative;
+            top:120px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            z-index: -10;
+            font-weight: 400;
+            color: white;
+
+            
+        }
+
+        .img-header {
+            background-image: url(./images/bg-header-about.jpg);
+            width: 100%;
+            margin-top: 90px;
+            background-position: center;
+            background-repeat: repeat-x;
+            height: 250px;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: rgb(226, 65, 92);
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .left,.right{
+            height: 500px;
+            vertical-align: top;
+            padding: 30px;
+        }
+
+        .left {
+            width: 35%;
+            text-align: center;
+            padding-top: 80px;
+            background-color: lightgray
+        }
+        .left h2{
+            padding-bottom: 50px;
+        }
+
+        .p-left{
+            padding-top: 25px;
+            
+
+        }
+        .hidden{
+            display: none;
+            /* visibility: hidden; */
+        }
+        h4{
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 18px;
+            color: rgb(226, 65, 92)
+        }
+
+        li:hover .hidden{
+            display: block;
+            /* visibility: visible; */
+
+        }
+        a:hover{
+            color: darkkhaki;
+            cursor: pointer;
+        }
+        .products{
+            margin: 140px auto;
+
+        }
+        td h4{
+            text-align: center;
+        }
+        footer{
+            width: 100%;
+            background-color:  rgb(226, 65, 92);
+            position: relative;
+            bottom: 0px;
+            padding-top: 70px;
+            padding-bottom: 10px;
+            height: 160px;
+            text-align: center;
+        }
+        .footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .before-footer{
+            width: 100%;
+            background-color: rgb(179, 187, 35);
+            height: 200px;
+            position: relative;
+            bottom: 0px;
+
+            display: flex;
+            text-align: center;
+            gap: 100px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            z-index: -10;
+            font-weight: 400;
+            color: white;
+        }
+        td img{
+            border-radius: 3px;
+            
+        }
+        
+        
