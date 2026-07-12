@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "randa"
+    },
+    {
+      "id": 2,
+      "name": "erfan"
+    },
+    {
+      "id": 3,
+      "name": "erfan"
+    },
+    {
+      "id": 4,
+      "name": "erfan"
+    },
+    {
+      "id": 5,
+      "name": "erfan"
+    },
+    {
+      "id": 6,
+      "name": "erfan"
+    },
+    {
+      "id": 7,
+      "name": "soha"
+    },
+    {
+      "id": 8,
+      "name": "hana"
+    },
+    {
+      "id": 9,
+      "name": "hi from backend"
+    },
+    {
+      "id": 10,
+      "name": "shahd"
+    },
+    {
+      "id": 11,
+      "name": "asmaa"
+    },
+    {
+      "id": 12,
+      "name": "eyad"
+    },
+    {
+      "id": 13,
+      "name": "dody"
+    },
+    {
+      "id": 14,
+      "name": "handoaa"
+    },
+    {
+      "id": 15,
+      "name": "unknown"
+    },
+    {
+      "id": 16,
+      "name": "no"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "randa"
+    },
+    {
+      "id": 3,
+      "userId": 10,
+      "title": "erfan"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "title": "erfan"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "title": "randood"
+    },
+    {
+      "id": 5,
+      "userId": 52,
+      "title": "hi from backend"
+    },
+    {
+      "id": 6,
+      "userId": 52,
+      "title": "hi from backend"
+    }
+  ]
+}

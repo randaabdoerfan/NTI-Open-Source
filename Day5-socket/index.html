@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- <link rel="stylesheet" href="./style.css"> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat</title>
+<style>
+        body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 20px;
+        width: 90%;
+    }
+    div[style*="display: flex"] {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+   div[style*="display: flex"] > div {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    width: 250px;
+}
+
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        background: #4a6cf7;
+        color: white;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        background: #3a57d0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 10px;
+        margin-top: 10px;
+        background: #f8f9ff;
+        border-radius: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    li {
+        background: #e9ecff;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 8px;
+    }
+
+</style>
+</head>
+
+<body>
+    <div id="user"></div>
+    <div style="display: flex; width: 100%;">
+
+
+<div id="div_reg">
+    <h2>Register or Login</h2>
+    <input id="name" type="text" placeholder="enter your name please">
+    <button id="register" onclick="Register()">Register or Login</button>
+</div>
+
+<div id="div_send" style="display: none;">
+    <h2 >send Private message</h2>
+    <input id="receiver" type="text" placeholder="enter the receiver name">
+    <input id="pri_msg" type="text" placeholder="enter the message">
+    <button id="send_pri" onclick="SendPrivate()">Send</button>
+    <ul id="pri_chat"></ul>
+</div>
+
+<div id="div_join" style="display: none;">
+    <h2>join room</h2>
+     <select name="joinRoom" id="joinRoom">
+        <option value="Developer">Developer</option>
+        <option value="Jobs">Jobs</option>
+        <option value="Interviews">Interviews</option>
+        <option value="Internships">Internships</option>
+    </select>
+    <button id="joinroom" onclick="joinRoom()">Join</button>
+</div>
+
+<div id="div_room" style="display: none;">
+    <h2  >Send message to My Room</h2>
+    <select name="selRoom" id="selRoom">
+        <option value="Developer">Developer</option>
+        <option value="Jobs">Jobs</option>
+        <option value="Interviews">Interviews</option>
+        <option value="Internships">Internships</option>
+    </select>
+
+    <input id="room_msg" type="text" placeholder="enter the message">
+    <button id="sendroom" onclick="sendRoom()">Send</button>
+
+    <ul id="room_chat">
+        <h4 id="member"></h4>
+    </ul>
+</div>
+</div>
+
+<script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
+
+<script>
+let joined = false;
+const socket = io();
+
+
+function Register() {
+    username = document.getElementById('name').value;
+    socket.emit('register', username);
+    joined = true
+    socket.name = username
+    const h3 = document.createElement('h3')
+    h3.innerText= `Hello,${username}`
+    document.getElementById('user').appendChild(h3)
+    document.getElementById('div_reg').style.display ='none'
+    document.getElementById('div_send').style.display ='block'
+    document.getElementById('div_join').style.display ='block'
+};
+
+function SendPrivate() {
+    socket.emit('private_msg', {
+        recevier: document.getElementById('receiver').value,
+        msg_body: document.getElementById('pri_msg').value
+    });
+};
+
+function joinRoom() {
+    const roomname = document.getElementById('joinRoom').value;
+    socket.emit('join_room', roomname);
+    document.getElementById('div_room').style.display ='block'
+};
+
+function sendRoom() {
+    socket.emit('msg_room', {
+        roomName: document.getElementById('selRoom').value,
+        sender:username,
+        msg_body: document.getElementById('room_msg').value
+    });
+};
+socket.on('private_msg', (msg) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${msg.sender}</strong>: <span>${msg.msg_body}</span>`;
+    document.getElementById('pri_chat').appendChild(li);
+});
+
+socket.on("msg_room", (room) => {
+    const lastMsg = room.msg[room.msg.length - 1]
+    const users = room.usersname.map(u=>u).join(', ')
+    const li = document.createElement("li");
+    document.getElementById('member').innerHTML =`Room:${room.roomName}<br/> members are :${users}`
+    li.innerHTML = `${lastMsg.sender}: ${lastMsg.msg_body}`;
+    document.getElementById('room_chat').appendChild(li);
+});
+
+</script>
+
+</body>
+</html>

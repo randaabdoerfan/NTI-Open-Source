@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "randa"
+    },
+    {
+      "id": 2,
+      "name": "erfan"
+    },
+    {
+      "id": 3,
+      "name": "erfan"
+    },
+    {
+      "id": 4,
+      "name": "erfan"
+    },
+    {
+      "id": 5,
+      "name": "erfan"
+    },
+    {
+      "id": 6,
+      "name": "erfan"
+    },
+    {
+      "id": 7,
+      "name": "soha"
+    },
+    {
+      "id": 8,
+      "name": "hana"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "randa"
+    },
+    {
+      "id": 3,
+      "userId": 10,
+      "title": "erfan"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "title": "erfan"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "title": "randood"
+    },
+    {
+      "id": 5,
+      "userId": 52,
+      "title": "hi from backend"
+    },
+    {
+      "id": 6,
+      "userId": 52,
+      "title": "hi from backend"
+    },
+    {
+      "id": 7,
+      "userId": 52,
+      "title": "hi from backend"
+    }
+  ]
+}
