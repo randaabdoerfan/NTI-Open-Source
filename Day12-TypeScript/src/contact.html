@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact</title>
+</head>
+
+<body>
+    <nav class="sm:w-full bg-gray-200 text-black darkNav:bg-gray-700 darkNav:text-white ">
+        <div class="sm:w-full w-full mx-auto flex h-16 items-center justify-around">
+            <div class="w-1/6 flex justify-center items-center">
+                <i class="fa-solid fa-bowl-food text-3xl"></i>
+                <a href="#" class="rounded py-2 px-3 hover:cursor-pointer font-bold capitalize text-3xl">Menu</a>
+            </div>
+            <div
+                class="menuShow w-full sm:w-fit h-90 sm:h-fit backdrop-blur-xl sm:flex sm:flex-row flex-col absolute top-0 left-0 sm:static ml-auto px-5 hidden gap-7 bg-[rgba(0,0,0,0.2)] sm:bg-transparent p-5 sm:p-0">
+
+
+                <a href="index.html" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300 ">Home</a>
+                <a href="./about.html" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300 ">About</a>
+                <a href="#meals" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300 ">Meals</a>
+                <a href="./contact.html" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="min-h-screen flex items-center justify-center p-6">
+
+        <div class="bg-white shadow-2xl rounded-2xl w-full max-w-2xl p-8">
+
+            <h1 class="text-3xl font-bold text-center mb-6">Contact Us</h1>
+            <form action="" class="contain-content flex flex-col gap-10 border p-8 rounded-2xl">
+                <input class="hover:border-b-2 p-2" type="text" placeholder="Your name">
+                <input class="hover:border-b-2 p-2" type="email" placeholder="Your email">
+                <textarea placeholder="Write your message here..."
+                    class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    name="message" rows="5">
+
+        </textarea>
+                <input class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition" type="submit"
+                    value="Send">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

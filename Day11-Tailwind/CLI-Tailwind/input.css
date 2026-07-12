@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer base {
+    li {
+        @apply hover:text-blue-500 relative sm:before:content-[''] sm:before:absolute sm:before:bottom-0 sm:before:w-0 sm:before:h-1 sm:before:bg-blue-800 sm:before:rounded-xl sm:hover:before:w-full sm:before:duration-150
+    }
+    img{
+        @apply w-37.5 h-37.5 rounded-full
+    }
+    p{
+
+    }
+
+}
+
+@layer components {
+    .card {
+        @apply w-75 h-fit  bg-blue-300 m-5 flex flex-col justify-center items-center rounded-xl capitalize
+    }
+    .card-container{
+
+    }
+}
+
+/* @layer utilities {
+    /* .kholoud{
+         display: flex;
+        flex-wrap: wrap; 
+        @apply flex flex-wrap
+    }
+
+} */
+
+@theme{
+    --color-kholoud:red;
+    --breakpoint-kh:300px;
+}

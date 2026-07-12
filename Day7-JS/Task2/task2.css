@@ -1,0 +1,48 @@
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
+    .div1 {
+        background-color: black;
+        border-radius: 10px;
+    }
+
+    h4 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 10px;
+        color: white;
+        border-bottom: 1px solid rgb(22, 22, 22);
+    }
+
+    pre {
+        color: green;
+        padding-left: 20px;
+    }
+    span{
+        background-color: rgb(0, 81, 255);
+        padding: 4px;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+    #copied_text{
+        width: 98%;
+        height: 200px;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    #copied_text:empty::before {
+    content: "Paste your code here.....";
+    color: gray;
+}input{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}

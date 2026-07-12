@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+
+<body>
+    <script>
+        var General = prompt("Please Enter a String...");
+
+        if (General.trim() === "") {
+            console.log("Please enter String, Don't leave it empty");
+
+        } else if (!isNaN(General)) {
+            console.log("Please enter text, not number");
+
+        } 
+         if (General.trim() === "") {
+            console.log("Please enter String, Don't leave it EMPTY");
+
+        } else if (!isNaN(General)) {
+            console.log("Please enter text, not NUMBER");
+
+        } 
+        else if (General.includes("!") ||General.includes("!")||General.includes("@")||General.includes("#")||General.includes("$")||General.includes("%")|| General.includes("^")||General.includes("&")||General.includes("*")||General.includes("(")||General.includes(")")) {
+            console.log("Please enter text, not SPECIAL CHARACTER");
+
+        } else {
+            var LettersOfString = General.toLowerCase().split("");
+            var count = 0;
+
+            for (var i = 0; i < LettersOfString.length; i++) {
+                if (
+                    LettersOfString[i] === "a" ||
+                    LettersOfString[i] === "e" ||
+                    LettersOfString[i] === "i" ||
+                    LettersOfString[i] === "o" ||
+                    LettersOfString[i] === "u"
+                ) {
+                    count++;
+                }
+            }
+
+            console.log(`Vowels count: ${count}`);
+        }
+    </script>
+
+</body>
+
+</html>

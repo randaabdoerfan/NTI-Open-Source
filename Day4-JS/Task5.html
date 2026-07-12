@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+</head>
+<body>
+    
+    <script>
+        var General = prompt("Enter your sentence..")
+
+        if (General.trim() === "") {
+            console.log("Please enter String, Don't leave it empty");
+
+        } else if (!isNaN(General)) {
+            console.log("Please enter text, not number");
+
+        } else {
+        General=General.trim();
+
+        console.log(General);
+        var LettersOfString = General.split("");
+        var newGeneral="";
+        console.log(LettersOfString)
+        for(i=0;i<LettersOfString.length;i++){
+            if(LettersOfString[i] !== ("@")
+            && LettersOfString[i]!==("#")
+            && LettersOfString[i] !== ("$")
+            && LettersOfString[i] !== ("%")
+            && LettersOfString[i] !== ("^")
+            && LettersOfString[i]!== ("&")
+            && LettersOfString[i] !==("!")
+            && LettersOfString[i] !==(" ")){
+               newGeneral +=LettersOfString[i]
+            }
+        }
+        console.log(`The Sentence After Remove Special Characters: ${newGeneral}`)
+    }
+    </script>
+    
+</body>
+</html>

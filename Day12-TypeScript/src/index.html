@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Menu</title>
+</head>
+
+<body>
+    <nav class="sm:w-full bg-gray-200 text-black darkNav:bg-gray-700 darkNav:text-white ">
+      <div class="sm:w-full w-full mx-auto flex h-16 items-center justify-around">
+        <div class="w-1/6 flex justify-center items-center">
+          <i class="fa-solid fa-bowl-food text-3xl"></i>
+          <a href="#" class="rounded py-2 px-3 hover:cursor-pointer font-bold capitalize text-3xl">Menu</a>
+        </div>
+        <div class="menuShow w-full sm:w-fit h-90 sm:h-fit backdrop-blur-xl sm:flex sm:flex-row flex-col absolute top-0 left-0 sm:static ml-auto px-5 hidden gap-7 bg-[rgba(0,0,0,0.2)] sm:bg-transparent p-5 sm:p-0">
+          
+         
+          <a href="index.html" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300 ">Home</a>
+          <a href="./about.html" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300 ">About</a>
+          <a href="#meals" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300 ">Meals</a>
+          <a href="./contact.html" class="rounded px-5 py-2 hover:cursor-pointer hover:bg-gray-300">Contact</a>
+        </div>
+    </div>
+  </nav>
+    <div id="meals" class="container mt-5 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center justify-items-center gap-10">
+       
+    </div>
+
+
+    <script type="module" src="../dist/index.js"></script>
+
+</body>
+
+</html>

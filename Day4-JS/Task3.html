@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+
+<body>
+    <script>
+        var sentence = prompt("Enter Your Sentence..");
+
+                if (sentence.trim() === "") {
+            console.log("Please enter String, Don't leave it EMPTY");
+
+        } else if (!isNaN(sentence)) {
+            console.log("Please enter text, not NUMBER");
+
+        } 
+        else if (sentence.includes("!") ||sentence.includes("!")||sentence.includes("@")||sentence.includes("#")||sentence.includes("$")||sentence.includes("%")|| sentence.includes("^")||sentence.includes("&")||sentence.includes("*")||sentence.includes("(")||sentence.includes(")")) {
+            console.log("Please enter text, not SPECIAL CHARACTER");
+
+        }  else {
+            sentence = sentence.trim().toLowerCase();
+            var new_sentence = sentence.split("");
+            var after_remove_duplication = "";
+
+            console.log("After removing spaces:", new_sentence);
+            for (var i = 0; i < new_sentence.length; i++) {
+                if (new_sentence[i] !== " ") {
+                    if (!after_remove_duplication.includes(new_sentence[i])) {
+                        after_remove_duplication += new_sentence[i];
+                    }
+                }
+            }
+            console.log("After removing duplicates:", after_remove_duplication);
+        }
+
+    </script>
+</body>
+
+</html>

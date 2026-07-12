@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a1 = 1;
+
+function test1() {
+    a1 = 2;  ///golbal
+    console.log(a1)
+    var a1;   ///local
+    console.log(a1)
+}
+
+test1();
+console.log(a1); 
+console.log("+++++++++++++++++++++++++++")  ////golbal ====1
+
+let a2 = 1;   ///golabel
+
+function test2() {
+    a2 = 2;    ////golabel
+}
+
+test2();
+console.log(a2);
+
+
+let a3= 10;
+
+{
+    // console.log(a);
+    let a3 = 20;
+}
+
+[].every(x => x > 10)
+
+
+    </script>
+</body>
+</html>

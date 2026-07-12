@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var students = [
+        { name: "Ali", age: 20, Crs: "CS" },
+        { name: "Sara", age: 22, Crs: "Math" },
+        { name: "Omar", age: 19, Crs: "Physics" },
+        { name: "Laila", age: 21, Crs: "CS" },
+        { name: "Hassan", age: 23, Crs: "Engineering" },
+        { name: "Mona", age: 20, Crs: "Biology" },
+        { name: "Kareem", age: 24, Crs: "Math" },
+        { name: "Noor", age: 18, Crs: "CS" },
+    ];
+
+    //1
+    document.write("<h1 style='color:red;font-weight:25px'>1-Display all students</h1>");
+
+    document.write(students.forEach(element => document.write(`
+     <h4>Name : ${element.name},
+      Age: ${element.age},
+      Course: ${element.Crs}<h4>`)));
+
+    //2
+    document.write("<h1 style='color:red;font-weight:25px'>2-Find and Search for a student by name and print their details.</h1>");
+    
+    name_search=prompt("Enter the name you want to search for : ")
+    let bool=false
+    for(let i=0;i<students.length;i++){
+        if(name_search === students[i]["name"]){
+            bool =true
+            document.write(`<h5>Name : ${students[i]["name"]},
+      Age: ${students[i]["age"]},
+       Course: ${students[i]["Crs"]}<h5>`)
+        }
+    }
+    if(!bool){
+    document.write(`<h4> There is no Student with this name </h4>`)
+
+    }
+//3
+    document.write("<h1 style='color:red;font-weight:25px'>3-Find how many students are in the array.</h1>");
+    document.write(`<h4> the student count : ${students.length}</h4>`)
+//4
+    document.write("<h1 style='color:red;font-weight:25px'>4-Get all students who are in 'CS'</h1>");
+    let count = 0;
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].Crs == "CS") {
+            count++;
+
+        }
+    }
+    document.write(`<h4> students who are in 'CS' : ${count}</h4>`)
+
+    //6
+    document.write("<h1 style='color:red;font-weight:25px'>6- Sort Students by age</h1>");
+    students2 =[...students]
+    let sorted = students2.sort((a, b) => {
+        return b.age - a.age
+
+    })
+    sorted.forEach(element => document.write(`
+     <h4>Name : ${element.name},
+      Age: ${element.age},
+      Course: ${element.Crs}<h4>`))
+
+//5
+    document.write("<h1 style='color:red;font-weight:25px'>5-Find youngest student</h1>");
+    document.write(`<h4>youngest student : ${sorted[sorted.length - 1]["name"]}</h4>`)
+
+//7
+    document.write("<h1 style='color:red;font-weight:25px'>7-Create a new array with only student names.</h1>");
+    students.forEach((elm) => {
+        document.write(`<h4>student name: ${elm["name"]}</h4>`)
+    })
+    //8
+    document.write("<h1 style='color:red;font-weight:25px'>8-Check if all students are above age  18 and return true or false </h1>");
+    let check = students.every((elm) => { elm["age"] > 18 })
+    document.write(`<h4>all students are above age  18 : ${check}</h4>`)
+//9
+    document.write("<h1 style='color:red;font-weight:25px'>9-return Students Who Have the Same Crs</h1>");
+    let math = []
+    let CS = []
+    let Physics = []
+    let Engineering = []
+    let Biology = []
+    // students3=[...students];
+    // std=students3.sort((a,b)=>{
+    //     if(a.Crs.toUpperCase() > b.Crs.toUpperCase())
+    //      return 1
+    //     else if(b.Crs.toUpperCase() < a.Crs.toUpperCase())
+    //      return -1
+    //     else{
+    //         return 0
+    //     }
+    // }
+
+    // )
+    // console.log(std)
+
+
+
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].Crs == "Math") {
+            math.push(students[i])
+        }
+        else if (students[i].Crs == "CS") {
+            CS.push(students[i])
+        }
+        else if (students[i].Crs == "Physics") {
+            Physics.push(students[i])
+        }
+        else if (students[i].Crs == "Engineering") {
+            Engineering.push(students[i])
+        }
+        else {
+            Biology.push(students[i])
+
+        }
+
+    }
+    
+    document.write(`<h3 style="color:brown;">Students Who Have Math :</h3>`)
+
+    math.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}<h4>`)
+    })
+
+    document.write(`<h3 style="color:brown;">Students Who Have Engineering :</h3>`)
+    Engineering.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}</h4>`)
+    })
+
+    document.write(`<h3 style="color:brown;">Students Who Have Physics :</h3>`)
+    Physics.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}<h4>`)
+    })
+    document.write(`<h3 style="color:brown;">Students Who Have CS :</h3>`)
+    CS.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}<h4>`)
+    })
+    document.write(`<h3 style="color:brown;" >Students Who Have Biology :</h3>`)
+    Biology.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}<h4>`)
+    })
+    //10
+
+
+    document.write("<h1 style='color:red;font-weight:25px'>10-Calculate the average age of all students.</h1>");
+    let sum = 0;
+    let avg = 0;
+    students.map((elm) => {
+        sum += elm["age"]
+    })
+    avg = sum / students.length
+    document.write(`<h4>the average age of all students : ${avg} float number. </h4>`)
+    document.write(`<h4>the average age of all students : ${parseInt(avg)} int number. </h4>`)
+
+//11
+    document.write("<h1 style='color:red;font-weight:25px'>11-Sort and Find top 3 oldest students</h1>");
+    let spliced = sorted.splice(0, 3)
+    spliced.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}</h4>`)
+    })
+    //12
+    document.write("<h1 style='color:red;font-weight:25px'>12-Find if there are students with the same name.</h1>");
+    let right = 0;
+    let same =""
+    for(let i=0;i<students.length;i++){
+        _name = students[i]["name"]
+        for(let j=1;j<students.length;j++){
+            if(_name == students[j]["name"]){
+                right+=1
+                same = students[j]["name"]
+                
+            }
+
+        }
+    }
+    console.log(right)
+    console.log(same)
+    if(right > 0){
+        document.write(`<h4>there are students with the same name </h4>`)
+    }
+    else {
+        document.write("there are No students with the sme name ")
+
+    }
+
+//13
+    document.write("<h1 style='color:red;font-weight:25px'>13-Reverse the array without using .reverse().</h1>");
+    function reverseArray(arr){
+        let reversed =[]
+        for(let i=arr.length-1;i>=0;i--){
+            reversed.push(arr[i])
+        }
+        return reversed 
+
+    }
+    reversed = reverseArray(students)
+        reversed.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name},
+      Age: ${elm.age},
+      Course: ${elm.Crs}</h4>`)
+    })
+        
+    
+//14
+    document.write("<h1 style='color:red;font-weight:25px'>14-Add a new property email : name.toLowerCase+'@Nti.com'</h1>");
+    
+    // students.map((elm)=>{
+    //     elm["email"]= elm["name"].toLowerCase()+"@NTI.com"
+        
+    // })
+   for (let i = 0; i < students.length; i++) {
+    students[i]["email"] = students[i]["name"].toLowerCase()+"@NTI.com"
+ 
+   }
+  
+    students.forEach((elm) => {
+        document.write(`
+     <h4>Name : ${elm.name}, 
+      Age: ${elm.age}, 
+      Course: ${elm.Crs}, 
+      Email: ${elm.email}</h4>`)
+    })
+
+
+
+
+
+
+
+
+</script>
+
+</html>

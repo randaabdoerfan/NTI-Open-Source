@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    <script>
+                
+        console.log("%c Sum using Array and Eval", "color:red;font-size:20px");
+         function sumAll(numbersArray){
+            let sum = eval(numbersArray.join("+"))
+            console.log(`First Way Sum is : ${sum}`)
+         }
+         sumAll([3,1,4,5,2]);
+         console.log("##########################################");
+        console.log("%c Sum using Arguments and Eval", "color:red;font-size:20px");
+
+          
+        function sumAll(){
+            let arr =[]
+            for (let i = 0; i < arguments.length; i++) {
+                arr.push(arguments[i])    
+            }
+
+            let sum = eval(arr.join("+"))
+            console.log(`Second Way Sum is : ${sum}`)
+
+         }
+         
+         sumAll(3,1,4,5,2);
+         console.log("##########################################");
+         
+         
+    </script>
+    
+</body>
+</html>

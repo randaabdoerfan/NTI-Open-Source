@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="w-full bg-white text-black dark:bg-gray-900 dark:text-white">
+    <header class="w-full bg-[rgba(0,0,0,0.2)] flex justify-around p-5">
+        <div class="logo flex items-center capitalize text-blue-700 text-[18px]">
+            <i class="fa-brands fa-slack"></i>
+            <h1>hi guest</h1>
+        </div>
+        <nav class="hidden sm:flex justify-around w-2/3">
+            <ul
+                class=" hidden sm:flex flex-col sm:flex-row absolute top-0 left-0 sm:static bg-[rgba(0,0,0,0.2)] sm:bg-transparent w-full sm:w-fit backdrop-blur-xl gap-8 sm:gap-[4vw]  capitalize h-[50vh] sm:h-fit p-5 sm:p-0">
+                <li class="close sm:hidden ml-auto px-5 pt-5"><i class="fa-solid fa-x"></i></li>
+                <li><a href="" class="text-blue-700">home</a></li>
+                <li><a href="">aboutUs</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">products</a></li>
+            </ul>
+            <div class="flex ml-auto sm:ml-0 gap-4">
+                <div class="login ">
+                    <i class="fa-regular fa-user cursor-pointer"></i>
+                </div>
+                <div class="bar sm:hidden cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="dark-mode cursor-pointer">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="h-screen w-full ">
+        <div class="main-content h-screen w-full flex items-center bg-[url(bg.jpg)] bg-no-repeat bg-cover bg-center">
+            <div class="container w-[60%] sm:w-[40%] bg-[rgba(0,0,0,0.2)] ml-10 p-10">
+                <h2 class="text-5xl capitalize">frontEnd</h2>
+                <p class="p-7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore quia, sit optio suscipit
+                    repellendus
+                    aliquam odio voluptate corrupti iste expedita eius perspiciatis saepe inventore laborum ut! Quisquam
+                    sit dignissimos ad.</p>
+                <button class="bg-linear-to-r from-blue-800 to-blue-100 p-3 rounded-xl capitalize">read more</button>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="card-container  justify-center items-center text-kholoud kh:text-white">
+            <div class="card">
+                <div class="img-container">
+                    <img src="../img/autumn.jpg" alt="">
+                </div>
+                <h3>title</h3>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="../img/autumn.jpg" alt="">
+                </div>
+                <h3>title</h3>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="../img/autumn.jpg" alt="">
+                </div>
+                <h3>title</h3>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="../img/autumn.jpg" alt="">
+                </div>
+                <h3>title</h3>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="../img/autumn.jpg" alt="">
+                </div>
+                <h3>title</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

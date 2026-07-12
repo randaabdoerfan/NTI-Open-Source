@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        color: white;
+        width: 30%;
+        margin: 150px auto;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        background-color: rgb(202, 156, 202);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    input{
+        height: 30px;
+        width: 85%;
+        border-radius:10px ;
+        border: 0px;
+        background-color: rgb(170, 140, 170);
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        
+        
+    }
+    input:hover{
+        height: 35px;
+        width: 90%;
+        border-bottom: 2px solid white;
+    }
+    input[type="submit"]{
+        width: 25%;
+        background-color: rgb(73, 71, 73); 
+        
+    }
+     input[type="submit"]:hover{
+        width: 35%;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <form action="" method="get">
+        <label for="username">UserName</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Send">
+    </form>
+    
+    <script>
+        
+        params = new URLSearchParams(location.search)
+        if(params.get("username")=== "ali" && params.get("password")==="123"){
+            open("Hello.html","ali","width=300,height=400")
+
+        }else{
+            alert("404 Error, You Can Try Again Later")
+        }
+
+
+
+        console.log();
+        console.log();
+
+ 
+    </script>
+</body>
+        
+
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+
+<body>
+    <script>
+        /////sort
+        console.log("%c Sorting", "color:red;font-size:20px");
+        console.log("%c First Way", "font-size:15px");
+        const arr = [45, 12, 78, 12, 67, 45, 3, 56, 89, 23, 67];
+        const ASC = [...arr].sort((a, b) => a - b);
+
+        let DSC = [...arr].sort((a, b) => b - a);
+        console.log(`ASC is ${ASC}`);
+        console.log(`DSC is ${DSC}`);
+
+        console.log("%c Second Way", "font-size:15px");
+
+        function sortAsc(arr) {
+            let copy = [...arr];
+
+            let sorted = [];
+            while (copy.length > 0) {
+                let min = copy[0];
+                let index = 0;
+                for (let i = 0; i < copy.length; i++) {
+                    if (copy[i] < min) {
+                        index = i;
+                        min = copy[i];
+                    }
+                }
+                sorted.push(min);
+                copy.splice(index, 1);
+            }
+            return sorted;
+
+        }
+        console.log(`ASC : ${sortAsc(arr).join()}`)
+
+        function sortDsc(arr) {
+            let copy = [...arr];
+            let sorted = [];
+
+            while (copy.length > 0) {
+                let max = copy[0];
+                let index = 0;
+                for (let i = 0; i < copy.length; i++) {
+                    if (copy[i] > max) {
+                        index = i;
+                        max = copy[i];
+                    }
+                }
+                sorted.push(max);
+                copy.splice(index, 1);
+            }
+            return sorted;
+
+        }
+        console.log(`DSC : ${sortDsc(arr).join()}`);
+        console.log("##########################################");
+
+        console.log("%c Filter > 50", "color:red;font-size:20px");
+        let Filter = [...arr].filter((elm) => {
+            return elm > 50;
+
+        })
+        console.log("%c First way", "font-size:15px")
+        console.log(`After Appling Filter: ${Filter.join()}`);
+        function Filter_Array(arr) {
+            let copy = [...arr];
+            let filtered_array = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 50) {
+                    filtered_array.push(arr[i])
+                }
+            }
+            return filtered_array;
+        }
+        console.log("%c Second way", "font-size:15px")
+        console.log(`After Appling user define object: ${Filter_Array(arr).join()}`)
+        console.log("##########################################");
+
+        console.log("%c Max and Min", "color:red;font-size:20px");
+        console.log("%c First way", "font-size:15px")
+        let max_arr = Math.max(arr);
+        let min_arr = Math.max(arr);
+        console.log(`Max is ${max_arr}`);
+        console.log(`Min is ${min_arr}`);
+
+        console.log("%c Second way", "font-size:15px")
+        let DSC_Sort = arr.sort((a, b) => {
+            return b - a
+        })
+        let max = DSC_Sort[0]
+        console.log(`The Maxaimum is : ${max}`)
+        let ASC_Sort = arr.sort((a, b) => {
+            return a - b
+        })
+
+        let min = ASC_Sort[0]
+        console.log(`The Minuimum is : ${min}`)
+        
+        console.log("%c Third way", "font-size:15px")
+
+        function Max_and_Min_Number(arr){
+            let copy_arr = [...arr]
+            let max = copy_arr[0];
+            let min = copy_arr[0];
+            for (let i = 0; i < copy_arr.length; i++) {
+            
+                if(copy_arr[i]> max){
+                    max = copy_arr[i]
+                }
+            
+            }
+            console.log(`the max is : ${max}`)
+            for (let i = 0; i < copy_arr.length; i++) {
+                if(copy_arr[i]< min){
+                    min = copy_arr[i]
+                }
+            
+            }
+            console.log(`the min is :${min}`)
+
+        }
+        Max_and_Min_Number(arr)
+        
+        console.log("##########################################");
+        console.log("%c Remove Duplication", "color:red;font-size:20px");
+        function Remove_Duplication(arr){
+            let new_array = [];
+            for(elm of arr){
+                if(!new_array.includes(elm)){
+                    new_array.push(elm)
+                }
+            }
+            console.log(new_array)
+
+
+        }
+        Remove_Duplication(arr)
+        
+        
+
+    </script>
+
+</body>
+
+</html>
